@@ -83,7 +83,7 @@ addBtn.addEventListener('click', addUser);
 
 const removeUser = async (userId, userCard) => {
 	try {
-		const deleteUser = await usersRequest.delete('users/:' + `${userId}`);
+		const deleteUser = await usersRequest.delete('users/' + `${userId}`);
 		if (deleteUser.status === 200) {
 			userCard.remove();
 		}
